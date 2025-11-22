@@ -1,0 +1,27 @@
+/* Centering and spacing for all sections */
+/* Vertical spacing between sections */
+.section {
+    padding: 6rem 0; /* was 4rem — this adds breathing room */
+  }
+  
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  
+  
+  /* Grid for experience (we'll refine later) */
+  .experience-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  /* Grid for projects (will become cards later) */
+  .projects-grid {
+    display: grid;
+    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  

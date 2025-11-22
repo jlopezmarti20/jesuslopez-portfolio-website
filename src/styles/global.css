@@ -6,6 +6,13 @@
   margin: 0;
   padding: 0;
 }
+html {
+  scroll-behavior: smooth;
+}
+.section {
+  scroll-margin-top: 80px; /* match your navbar height */
+}
+
 
 html,
 body {

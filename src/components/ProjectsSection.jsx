@@ -5,6 +5,8 @@ import projectsData from "../data/projectsData";
 // Composite hero images
 import movesComposite from "../assets/Group 1.png";
 import iosComposite from "../assets/Group 2.png";
+import shpeDataGraphic from "../assets/Group 3.png";
+import mlGraphic from "../assets/Group 4.png";
 
 function ProjectsSection() {
   const cardRefs = useRef([]);
@@ -26,24 +28,21 @@ function ProjectsSection() {
     );
 
     cards.forEach((card) => observer.observe(card));
-
     return () => observer.disconnect();
   }, []);
 
   return (
     <section id="projects" className="section">
       <div className="container">
-        <div className="section-title">
-          <h2>Projects</h2>
-          <div className="section-underline" />
-        </div>
 
         <div className="projects-grid">
           {projectsData.map((project, index) => {
-            // Use slug as main identifier, fall back to id if needed
             const slug = project.slug || project.id || `project-${index}`;
+
             const isMoves = slug === "moves-app";
             const isIOS = slug === "ios-shpe";
+            const isShpeData = slug === "shpe-data";
+            const isML = slug === "ml-diabetes";
 
             return (
               <article
@@ -51,10 +50,13 @@ function ProjectsSection() {
                 className={`project-card 
                   ${isMoves ? "project-card--moves" : ""} 
                   ${isIOS ? "project-card--iosshpe" : ""} 
+                  ${isShpeData ? "project-card--shpedata" : ""}
+                  ${isML ? "project-card--ml" : ""}
                   ${project.accentClass || ""}`}
                 ref={(el) => (cardRefs.current[index] = el)}
               >
-                {/* Visual area */}
+
+                {/* Visual Handling */}
                 {isMoves ? (
                   <div className="project-visual moves-visual">
                     <img
@@ -71,6 +73,22 @@ function ProjectsSection() {
                       className="project-image"
                     />
                   </div>
+                ) : isShpeData ? (
+                  <div className="project-visual shpe-visual">
+                    <img
+                      src={shpeDataGraphic}
+                      alt="SHPE Data Analysis & Insights"
+                      className="project-image"
+                    />
+                  </div>
+                ) : isML ? (
+                  <div className="project-visual ml-visual">
+                    <img
+                      src={mlGraphic}
+                      alt="Machine Learning Diabetes Detection"
+                      className="project-image"
+                    />
+                  </div>
                 ) : (
                   project.image && (
                     <div className="project-visual">
@@ -83,13 +101,14 @@ function ProjectsSection() {
                   )
                 )}
 
-                {/* Text content */}
+                {/* Text Content */}
                 <div className="project-card-content">
                   <h3>{project.title}</h3>
-                  {project.year && (
-                    <i className="project-year">{project.year}</i>
-                  )}
+
+                  {project.year && <i className="project-year">{project.year}</i>}
+
                   <hr />
+
                   <p>{project.description || project.summary}</p>
 
                   {project.link && (
@@ -104,6 +123,7 @@ function ProjectsSection() {
             );
           })}
         </div>
+
       </div>
     </section>
   );

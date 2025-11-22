@@ -9,8 +9,11 @@ import ExperienceSection from './components/ExperienceSection';
 import ProjectsSection from './components/ProjectsSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
+import AboutSection from "./components/AboutSection";
+
 
 import ProjectDetail from "./pages/ProjectDetail";
+
 
 function App() {
   return (
@@ -26,7 +29,7 @@ function App() {
                 <Hero />
                 <ProjectsSection />
                 <ExperienceSection />
-                <ContactSection />
+                <AboutSection />
               </main>
             </>
           } 

@@ -1,7 +1,7 @@
 /* Centering and spacing for all sections */
 /* Vertical spacing between sections */
 .section {
-    padding: 6rem 0; /* was 4rem — this adds breathing room */
+    padding: 1.5rem 0; /* was 4rem — this adds breathing room */
   }
   
   .container {

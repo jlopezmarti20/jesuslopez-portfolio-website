@@ -16,28 +16,28 @@ const projectsData = [
     summary:
       "A community-focused mobile app built using SwiftUI and MongoDB to engage the SHPE UF community.",
     tech: "SwiftUI • MongoDB • iOS",
-    image: null, // we override this with Group 2 composite
+    image: null, // overridden with Group 2 composite
     link: "/projects/ios-shpe",
   },
   {
-    id: "group1",
-    title: "Group Project 1",
-    year: "2023",
+    slug: "shpe-data",
+    id: "shpe-data",
+    title: "SHPE Data Analysis",
+    year: "2025",
     description:
-      "First group project for DIG3588, focused on learning the full process from concept to delivery.",
-    image: "/assets/group1_mock.png",
-    link: "/projects/group-1",
-    accentClass: "project-accent-purple",
+      "Designed dashboards, survey analytics, and reporting pipelines for 400+ SHPE UF members as Director of Data Analysis & Insights.",
+    // we override the visual with Group 3 in ProjectsSection.jsx
+    image: null,
+    link: "/projects/shpe-data", // <-- this makes “View Project” show up
   },
   {
-    id: "group2",
-    title: "Group Project 2",
-    year: "2023",
+    slug: "ml-diabetes",
+    title: "ML Diabetes Detection",
+    year: "2025",
     description:
-      "Second group assignment for DIG3588, focusing on stronger visuals and more refined UX/UI.",
-    image: "/assets/group2_mock.png",
-    link: "/projects/group-2",
-    accentClass: "project-accent-green",
+      "Analyzed factors influencing diabetes using regression and classification models, including correlation analysis and class imbalance evaluation.",
+    link: "/projects/ml-diabetes",
+    accentClass: "project-card--ml",
   },
 ];
 

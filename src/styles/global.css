@@ -256,12 +256,7 @@ footer {
     font-size: 0.9rem;
   }
 
-  /* Experience rows on mobile */
-  .experience-row {
-    display: flex;
-    align-items: center; /* vertically center logo + text */
-    gap: 1rem;
-  }
+
 
   .experience-role {
     font-size: 1.15rem;
@@ -271,9 +266,17 @@ footer {
     font-size: 0.95rem;
   }
 
-  .experience-logo {
-    width: 55px;
-    height: 55px;
-    object-fit: contain;
-  }
+/* Experience rows on mobile */
+.experience-row {
+  display: flex;
+  align-items: flex-start; /* FIXES LOGO ALIGNMENT */
+  gap: 1rem;
+}
+
+.experience-logo {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  margin-top: 2px; /* visually centers icon relative to text */
+}
 }

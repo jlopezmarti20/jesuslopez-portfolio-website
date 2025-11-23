@@ -1,4 +1,4 @@
-/* ===== Global Reset / Base ===== */
+/* ========= Global Reset / Base ========= */
 *,
 *::before,
 *::after {
@@ -12,7 +12,7 @@ html {
 }
 
 .section {
-  scroll-margin-top: 80px; /* keeps anchor links from hiding under navbar */
+  scroll-margin-top: 80px; /* offset for sticky navbar */
 }
 
 html,
@@ -45,18 +45,12 @@ h3 {
   font-weight: 600;
 }
 
-/* Layout */
+/* Main layout */
 main {
   padding-top: 4rem; /* space for navbar */
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.75rem;
-}
-
-/* ===== Navbar ===== */
+/* ========= Navbar ========= */
 .navbar {
   position: sticky;
   top: 0;
@@ -94,7 +88,8 @@ main {
   opacity: 1;
 }
 
-/* ===== Hero Section ===== */
+/* ========= Hero Section ========= */
+
 .hero-section {
   padding: 6rem 0 4rem;
 }
@@ -116,7 +111,7 @@ main {
   margin-bottom: 1.5rem;
 }
 
-/* Hero waveform */
+/* waveform image */
 .hero-img-wrapper {
   width: 98vw;
   margin: 2rem 0;
@@ -130,7 +125,7 @@ main {
   filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.9));
 }
 
-/* Hero subtitle */
+/* headline under waveform */
 .hero-sub {
   max-width: 860px;
   margin: 1.9rem auto 0;
@@ -140,7 +135,6 @@ main {
   opacity: 0.92;
 }
 
-/* Gradient text */
 .gradient-text {
   background: linear-gradient(90deg, #ff9c3f, #246bff);
   background-clip: text;
@@ -150,503 +144,8 @@ main {
   font-weight: 600;
 }
 
-/* ===== Generic Card ===== */
-.card {
-  background: #181923;
-  border-radius: 22px;
-  padding: 1.9rem 2.1rem;
-  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.04);
-  transition: transform 0.18s ease-out, box-shadow 0.18s ease-out,
-    border-color 0.18s ease-out;
-}
+/* ========= Contact Section ========= */
 
-.card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 32px 70px rgba(0, 0, 0, 0.95);
-  border-color: rgba(255, 255, 255, 0.09);
-}
-
-/* ===== Experience & Leadership (old cards) ===== */
-.experience-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 1.9rem;
-}
-
-.experience-card {
-  display: flex;
-  flex-direction: column;
-  gap: 0.9rem;
-}
-
-.card-header {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  margin-bottom: 0.25rem;
-}
-
-.card-title {
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.card-dates {
-  font-size: 0.85rem;
-  opacity: 0.7;
-}
-
-.card-list {
-  margin-left: 1.2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-  font-size: 0.95rem;
-  opacity: 0.96;
-}
-
-.card-tech {
-  margin-top: 0.6rem;
-  font-size: 0.85rem;
-  opacity: 0.8;
-}
-
-/* ===== Project Cards / Grid ===== */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.project-card {
-  display: flex;
-  flex-direction: column;
-  background: #18181f;
-  border-radius: 22px;
-  padding: 2.4rem 2.6rem;
-  width: 100%;
-  height: 540px;
-  box-sizing: border-box;
-  overflow: hidden;
-  opacity: 0;
-  transform: translateY(32px);
-  transition:
-    opacity 0.6s ease-out,
-    transform 0.6s ease-out,
-    box-shadow 0.25s ease,
-    border-color 0.25s ease;
-}
-
-.project-card.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.project-card:hover {
-  transform: translateY(-6px);
-}
-
-.project-card h3 {
-  font-size: 1.9rem;
-  font-weight: 700;
-  letter-spacing: -0.3px;
-  margin-bottom: 0.15rem;
-}
-
-.project-year {
-  font-size: 1.1rem;
-  opacity: 0.8;
-  margin-bottom: 0.9rem;
-}
-
-.project-card p {
-  font-size: 1.05rem;
-  line-height: 1.55;
-  opacity: 0.92;
-  max-width: 34rem;
-  margin-bottom: 1.8rem;
-}
-
-.project-card-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.project-card .links,
-.card-actions {
-  margin-top: auto;
-}
-
-/* Project visual */
-.project-visual {
-  position: relative;
-  width: 100%;
-  height: 260px;
-  margin-bottom: 1.6rem;
-}
-
-.project-image {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.moves-visual {
-  position: relative;
-  overflow: visible;
-}
-
-/* ===== Special Project Cards (Moves, iOS, SHPE, ML) ===== */
-.project-card--moves {
-  background:
-    radial-gradient(circle at 25% 0%, rgba(255, 255, 255, 0.16) 0%, transparent 55%),
-    linear-gradient(180deg, #1b1b1f 0%, #050506 100%);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.project-card--moves .project-visual {
-  position: relative;
-  overflow: visible;
-  height: 260px;
-  margin-bottom: 2rem;
-}
-
-.project-card--moves .project-image {
-  width: 92%;
-  max-width: 460px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  object-fit: contain;
-}
-
-.project-card--moves .project-card-content {
-  margin-top: -0.25rem;
-}
-
-/* iOS SHPE card */
-.project-card--iosshpe {
-  background: linear-gradient(180deg, #182032 0%, #0d121c 100%);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.ios-visual {
-  position: relative;
-  overflow: visible;
-  height: 260px;
-  margin-bottom: 2rem;
-}
-
-.ios-visual img {
-  width: 92%;
-  max-width: 460px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  object-fit: contain;
-}
-
-:root {
-  --ios-blue: #3b82f6;
-}
-
-.project-card--iosshpe h3 {
-  color: var(--ios-blue);
-}
-
-.project-card--iosshpe .links a {
-  color: var(--ios-blue);
-  font-weight: 600;
-  transition: color 0.25s ease;
-}
-
-.project-card--iosshpe .links a:hover {
-  color: #60a5fa;
-}
-
-.project-card--iosshpe .links a .home-arrow {
-  color: inherit;
-}
-
-/* SHPE Data Analysis card */
-.project-card--shpedata {
-  background:
-    radial-gradient(circle at 30% 0%, rgba(44, 255, 140, 0.2) 0%, transparent 60%),
-    linear-gradient(180deg, #0e1511 0%, #050706 100%);
-  border: 1px solid rgba(60, 255, 160, 0.25);
-}
-
-.project-card--shpedata h3,
-.project-card--shpedata .links a {
-  color: #4af28d;
-}
-
-.project-card--shpedata .project-visual {
-  height: 230px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: 10px;
-}
-
-.project-card--shpedata .project-image {
-  width: 82%;
-  max-width: 440px;
-  transform: translateY(-10px);
-}
-
-/* ML Diabetes card */
-.project-card--ml {
-  background:
-    radial-gradient(circle at 35% 0%, rgba(255, 70, 70, 0.22) 0%, transparent 60%),
-    linear-gradient(180deg, #181315 0%, #090607 100%);
-  border: 1px solid rgba(255, 70, 70, 0.22);
-}
-
-.project-card--ml h3,
-.project-card--ml .links a {
-  color: #ff6b6b;
-}
-
-.project-card--ml .project-visual {
-  height: 230px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: 8px;
-}
-
-.project-card--ml .project-image {
-  width: 75%;
-  max-width: 420px;
-  transform: translateY(-12px);
-}
-
-/* Align SHPE + ML titles */
-.project-card--shpedata h3,
-.project-card--ml h3 {
-  font-size: 1.75rem;
-  line-height: 1.2;
-  max-width: 22rem;
-  min-height: 2.4rem;
-}
-
-.project-card--shpedata .project-card-content,
-.project-card--ml .project-card-content {
-  margin-top: -6px;
-}
-
-/* ===== Buttons (generic) ===== */
-.button {
-  display: inline-block;
-  padding: 0.55rem 1.35rem;
-  border-radius: 999px;
-  font-size: 0.9rem;
-  text-decoration: none;
-  border: none;
-}
-
-.button-primary {
-  background: #ff9c3f;
-  color: #050509;
-  font-weight: 600;
-  box-shadow: 0 12px 25px rgba(255, 156, 63, 0.45);
-}
-
-.button-primary:hover {
-  filter: brightness(1.05);
-}
-
-/* ===== Section Titles (default) ===== */
-.section-title {
-  margin-bottom: 2.8rem;
-}
-
-.section-title h2 {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-}
-
-.section-underline {
-  width: 56px;
-  height: 3px;
-  border-radius: 999px;
-  margin-top: 0.5rem;
-  background: linear-gradient(90deg, #ff9c3f, #246bff);
-}
-
-/* ===== Experience Section (new card layout) ===== */
-.experience-list-card {
-  background: #1c1c23;
-  padding: 1.6rem 2.2rem;
-  border-radius: 20px;
-  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-#experience .experience-heading {
-  font-size: 2.4rem;
-  font-weight: 700;
-  margin-bottom: 0.6rem;
-}
-
-#experience .section-underline {
-  display: none !important;
-}
-
-.experience-card-header {
-  margin-bottom: 0.4rem;
-}
-
-.experience-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.9rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.experience-row:last-child {
-  border-bottom: none;
-}
-
-.experience-left {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-}
-
-.experience-logo {
-  width: 72px;
-  height: 72px;
-  border-radius: 16px;
-  object-fit: cover;
-}
-
-.experience-role {
-  font-size: 1.55rem;
-  font-weight: 700;
-}
-
-.experience-company {
-  font-size: 1.25rem;
-  opacity: 0.9;
-}
-
-.experience-dates {
-  font-size: 1.35rem;
-  opacity: 0.85;
-  white-space: nowrap;
-  font-style: italic;
-}
-
-/* ===== Project Detail Page ===== */
-.project-detail-header h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.project-detail-tech {
-  font-size: 0.95rem;
-  opacity: 0.85;
-}
-
-.back-link {
-  display: inline-block;
-  margin-bottom: 1.5rem;
-  font-size: 0.9rem;
-  opacity: 0.85;
-}
-
-.back-link:hover {
-  opacity: 1;
-  text-decoration: underline;
-}
-
-.project-detail-content {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.project-detail-section h2 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
-.project-detail-section p,
-.project-detail-section ul {
-  font-size: 0.98rem;
-  opacity: 0.9;
-}
-
-.project-detail-section ul {
-  margin-left: 1.2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.45rem;
-}
-
-/* ===== About Me Section ===== */
-.about-card {
-  background: #1b1b23;
-  padding: 1.8rem 2.2rem;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  max-width: 1150px;
-  margin: 0 auto;
-}
-
-.about-heading {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 0.6rem;
-}
-
-.about-card p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  opacity: 0.92;
-  margin-bottom: 1.4rem;
-}
-
-.about-links {
-  display: flex;
-  gap: 1.2rem;
-  margin-top: 1.4rem;
-}
-
-.about-links a {
-  padding: 0.9rem 2rem;
-  border-radius: 10px;
-  background: #26262f;
-  font-size: 1rem;
-  opacity: 0.95;
-  transition: 0.2s ease;
-}
-
-.about-links a:hover {
-  opacity: 1;
-  background: #2f2f38;
-}
-
-.about-highlight {
-  background: linear-gradient(90deg, #ff9c3f, #0b59ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  font-weight: 600;
-}
-
-/* ===== Contact Section (if used) ===== */
 .contact-text {
   margin-bottom: 0.75rem;
   opacity: 0.9;
@@ -674,13 +173,13 @@ main {
   opacity: 1;
 }
 
-/* ===== Section Title helper ===== */
+/* ========= Section Title & Footer ========= */
+
 .section h2 {
   font-size: 1.6rem;
   margin-bottom: 2rem;
 }
 
-/* ===== Footer ===== */
 footer {
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   padding: 2rem 0;
@@ -690,9 +189,7 @@ footer {
   text-align: center;
 }
 
-/* ========================================================= */
-/* ===== MOBILE TWEAKS (≤ 768px) =========================== */
-/* ========================================================= */
+/* ========= Mobile Tweaks (≤ 768px) ========= */
 @media (max-width: 768px) {
   /* Navbar */
   .navbar {
@@ -700,7 +197,7 @@ footer {
   }
 
   .nav-content h2 {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
   }
 
   .nav-content ul {
@@ -710,21 +207,18 @@ footer {
 
   /* Hero */
   .hero-section {
-    padding: 4.5rem 0 2.5rem;
+    padding: 4.5rem 0 3rem;
   }
 
   .hero-title {
     font-size: 2.1rem;
+    line-height: 1.2;
   }
 
   .hero-sub {
-    font-size: 1.55rem;
-    line-height: 1.5;
-    padding: 0 0.8rem;
-  }
-
-  .hero-img-wrapper {
-    width: 110vw;
+    font-size: 1.65rem;
+    line-height: 1.35;
+    margin-top: 1.4rem;
   }
 
   /* Cards (experience / projects / about) */
@@ -744,25 +238,7 @@ footer {
     font-size: 1.5rem;
   }
 
-  /* Experience rows – mobile alignment */
-  .experience-row {
-    align-items: flex-start !important;
-    gap: 1rem;
-  }
-
-  .experience-logo {
-    width: 48px;
-    height: 48px;
-    object-fit: contain;
-    flex-shrink: 0;
-  }
-
-  .experience-role {
-    font-size: 1.15rem;
-    line-height: 1.2;
-  }
-
-  /* Experience + About headings */
+  /* Experience heading + About heading */
   #experience .experience-heading,
   .about-heading {
     font-size: 2rem;
@@ -778,5 +254,26 @@ footer {
   .about-links a {
     padding: 0.7rem 1.4rem;
     font-size: 0.9rem;
+  }
+
+  /* Experience rows on mobile */
+  .experience-row {
+    display: flex;
+    align-items: center; /* vertically center logo + text */
+    gap: 1rem;
+  }
+
+  .experience-role {
+    font-size: 1.15rem;
+  }
+
+  .experience-company {
+    font-size: 0.95rem;
+  }
+
+  .experience-logo {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
   }
 }

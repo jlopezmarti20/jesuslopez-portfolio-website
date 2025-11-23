@@ -15,8 +15,6 @@
   border-color: rgba(255, 255, 255, 0.09);
 }
 
-
-
 /* EXPERIENCE & LEADERSHIP */
 .experience-grid {
   display: flex;
@@ -194,6 +192,7 @@
   object-fit: contain;
 }
 
+/* iOS blue accent */
 :root {
   --ios-blue: #3b82f6;
 }
@@ -258,7 +257,7 @@
   filter: brightness(1.05);
 }
 
-/* SECTION TITLES (default) */
+/* SECTION TITLES */
 .section-title {
   margin-bottom: 2.8rem;
 }
@@ -276,7 +275,7 @@
   background: linear-gradient(90deg, #ff9c3f, #246bff);
 }
 
-/* EXPERIENCE SECTION */
+/* EXPERIENCE SECTION (cards) */
 .experience-list-card {
   background: #1c1c23;
   padding: 1.6rem 2.2rem;
@@ -499,9 +498,50 @@
   background: #2f2f38;
 }
 
+/* Gradient highlight words in About Me */
 .about-highlight {
   background: linear-gradient(90deg, #ff9c3f, #0b59ff);
-  /*-webkit-background-clip: text; */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
   -webkit-text-fill-color: transparent;
   font-weight: 600;
+  display: inline-block;
+  line-height: 1;
+  padding: 0;
+}
+
+/* ===== Mobile Tweaks for Experience & About (≤ 768px) ===== */
+@media (max-width: 768px) {
+  /* Experience: hide dates + stack layout like reference */
+  .experience-dates {
+    display: none !important;
+  }
+
+  .experience-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+  }
+
+  .experience-logo {
+    width: 56px;
+    height: 56px;
+  }
+
+  /* About Me text + buttons */
+  #about .about-heading {
+    font-size: 2rem !important;
+  }
+
+  #about .about-card p {
+    font-size: 1.05rem !important;
+    line-height: 1.6;
+    margin-bottom: 1.1rem;
+  }
+
+  .about-links a {
+    padding: 0.7rem 1.4rem;
+    font-size: 0.9rem;
+  }
 }

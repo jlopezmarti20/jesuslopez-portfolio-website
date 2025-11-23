@@ -12,7 +12,7 @@ html {
 }
 
 .section {
-  scroll-margin-top: 80px; /* match navbar height */
+  scroll-margin-top: 80px; /* Match navbar height */
 }
 
 html,
@@ -47,10 +47,12 @@ h3 {
 
 /* Main layout */
 main {
-  padding-top: 4rem; /* space for navbar */
+  padding-top: 4rem;
 }
 
-/* ===== Navbar ===== */
+/* =========================
+   NAVBAR
+========================= */
 .navbar {
   position: sticky;
   top: 0;
@@ -88,7 +90,10 @@ main {
   opacity: 1;
 }
 
-/* ===== Hero Section ===== */
+/* =========================
+   HERO SECTION
+========================= */
+
 .hero-section {
   padding: 6rem 0 4rem;
 }
@@ -110,7 +115,7 @@ main {
   margin-bottom: 1.5rem;
 }
 
-/* Hero waveform image */
+/* Wave image */
 .hero-img-wrapper {
   width: 98vw;
   margin: 2rem 0;
@@ -124,27 +129,30 @@ main {
   filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.9));
 }
 
-/* Hero subtitle */
 .hero-sub {
   max-width: 860px;
   margin: 1.9rem auto 0;
   font-size: 2.45rem;
   line-height: 1.6;
-  text-align: center;
   opacity: 0.92;
+  text-align: center;
 }
 
-/* Generic gradient text */
 .gradient-text {
   background: linear-gradient(90deg, #ff9c3f, #246bff);
   background-clip: text;
   color: transparent;
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
   font-weight: 600;
 }
 
-/* ===== Mobile Tweaks (≤ 768px) ===== */
+/* =========================
+   MOBILE (≤ 768px)
+========================= */
+
 @media (max-width: 768px) {
   /* Navbar */
   .navbar {
@@ -157,24 +165,100 @@ main {
   }
 
   /* Hero */
-  .hero-section {
-    padding-top: 4rem;
-    padding-bottom: 2rem;
+  .hero {
+    padding-top: 7rem;
   }
 
-  .hero-title {
-    font-size: 2.3rem;
+  .hero h1 {
+    font-size: 2.4rem;
     line-height: 1.15;
   }
 
-  .hero-sub {
+  .hero p {
+    font-size: 1.05rem;
+    line-height: 1.5;
+  }
+
+  /* Cards (experience / projects / about) */
+  .card,
+  .project-card,
+  .experience-list-card,
+  .about-card {
+    padding: 1.4rem 1.2rem;
+    border-radius: 18px;
+  }
+
+  .project-card {
+    height: auto;
+  }
+
+  /* Section headings */
+  #experience .experience-heading,
+  .about-heading {
+    font-size: 2rem;
+  }
+
+  /* About text */
+  .about-card p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 1.1rem;
+  }
+
+  .about-links a {
+    padding: 0.7rem 1.4rem;
+    font-size: 0.9rem;
+  }
+
+  /* ============================
+     EXPERIENCE (Mobile Fixes)
+     ============================ */
+
+  /* Experience row: icon + role + company */
+  .experience-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.7rem 0;
+    gap: 1rem;
+  }
+
+  .experience-left {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+  }
+
+  .experience-logo {
+    width: 52px !important;
+    height: 52px !important;
+    border-radius: 12px;
+    object-fit: contain;
+  }
+
+  /* Job title on ONE line */
+  .experience-role {
     font-size: 1.15rem;
-    line-height: 1.55;
-    padding: 0 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .experience-company {
+    font-size: 1rem;
+    opacity: 0.9;
+  }
+
+  /* Hide dates on mobile */
+  .experience-dates {
+    display: none;
   }
 }
 
-/* ===== Contact section (if used) ===== */
+/* =========================
+   CONTACT
+========================= */
+
 .contact-text {
   margin-bottom: 0.75rem;
   opacity: 0.9;
@@ -194,26 +278,26 @@ main {
   font-size: 0.95rem;
 }
 
-.contact-links a {
-  opacity: 0.85;
-}
-
 .contact-links a:hover {
   opacity: 1;
 }
 
-/* ===== Section Title ===== */
+/* =========================
+   SECTION TITLES
+========================= */
+
 .section h2 {
   font-size: 1.6rem;
   margin-bottom: 2rem;
 }
 
-/* ===== Footer ===== */
+/* Footer */
 footer {
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   padding: 2rem 0;
   margin-top: 3rem;
+  text-align: center;
   font-size: 0.9rem;
   opacity: 0.8;
-  text-align: center;
 }
+

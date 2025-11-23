@@ -152,6 +152,80 @@ main {
   
     font-weight: 600;
   }
+
+
+  /* ===========================
+   MOBILE TWEAKS (≤ 768px)
+   =========================== */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    padding: 0.9rem 1.2rem;
+  }
+
+  .nav-content h2 {
+    font-size: 1.1rem;
+  }
+
+  .nav-content ul {
+    gap: 1.1rem;
+    font-size: 0.9rem;
+  }
+
+/* Hero section (correct classes) */
+.hero-section {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+.hero-title {
+  font-size: 2.3rem;
+  line-height: 1.15;
+}
+
+.hero-sub {
+  font-size: 1.15rem;
+  line-height: 1.55;
+  padding: 0 1rem;
+}
+
+
+  /* Cards (experience / projects / about) */
+  .card,
+  .project-card,
+  .experience-list-card,
+  .about-card {
+    padding: 1.4rem 1.2rem;
+    border-radius: 18px;
+  }
+
+  .project-card {
+    height: auto;               /* no fixed tall cards on mobile */
+  }
+
+  .project-card h3 {
+    font-size: 1.5rem;
+  }
+
+  /* Experience + About headings */
+  #experience .experience-heading,
+  .about-heading {
+    font-size: 2rem;
+  }
+
+  /* About text & buttons */
+  .about-card p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 1.1rem;
+  }
+
+  .about-links a {
+    padding: 0.7rem 1.4rem;
+    font-size: 0.9rem;
+  }
+}
+
   
 
 /* ========================================================= */

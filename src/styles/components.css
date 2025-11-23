@@ -501,7 +501,7 @@
 
 .about-highlight {
   background: linear-gradient(90deg, #ff9c3f, #0b59ff);
-  -webkit-background-clip: text;
+  /*-webkit-background-clip: text; */
   -webkit-text-fill-color: transparent;
   font-weight: 600;
 }

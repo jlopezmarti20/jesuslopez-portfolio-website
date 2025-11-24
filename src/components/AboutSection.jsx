@@ -40,7 +40,7 @@ function AboutSection() {
                 LinkedIn
               </a>
               <a
-                href="/resume.pdf" // TODO: update to your actual resume path
+                href="/Jesus_Lopez_Resume.pdf"
                 className="about-link"
               >
                 Resume

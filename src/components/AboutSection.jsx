@@ -9,7 +9,7 @@ function AboutSection() {
             <div className="about-body">
               <p>
                 I’m an undergraduate student at the University of Florida obtaining a degree in Computer Science with a focus in
-                data analysis seeking a full-time position in the fileds of {" "}
+                data analysis seeking a full-time position in the fields of {" "}
                 <span className="about-highlight">Business Intelligence</span> and{" "}
                 <span className="about-highlight">Data Analysis</span>.
               </p>

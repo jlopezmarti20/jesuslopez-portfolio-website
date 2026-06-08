@@ -11,6 +11,16 @@ const projectsData = [
     image: null,
   },
   {
+    slug: "ios-shpe",
+    title: "iOS SHPE UF App",
+    year: "2025",
+    summary:
+      "A production-ready iOS app built with Swift for 300+ SHPE UF members to track events, announcements, and SHPEitos points in real time.",
+    tech: "SwiftUI • MongoDB • iOS",
+    image: null,
+    link: "/projects/ios-shpe",
+  },
+  {
     slug: "shpe-data",
     id: "shpe-data",
     title: "SHPE Data Analysis",
@@ -37,16 +47,6 @@ const projectsData = [
     description:
       "A swipe-based location discovery app where users match with nearby places based on their current mood, built with ReactJS, Django REST, and MySQL.",
     link: "/projects/moves",
-  },
-  {
-    slug: "ios-shpe",
-    title: "iOS SHPE UF App",
-    year: "2024",
-    summary:
-      "A production-ready iOS app built with Swift for 300+ SHPE UF members to track events, announcements, and SHPEitos points in real time.",
-    tech: "SwiftUI • MongoDB • iOS",
-    image: null,
-    link: "/projects/ios-shpe",
   },
 ];
 

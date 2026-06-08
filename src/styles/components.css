@@ -550,19 +550,19 @@
 /* GATORMIND CARD */
 .project-card--gatormind {
   background:
-    radial-gradient(circle at 25% 0%, rgba(0, 200, 200, 0.2) 0%, transparent 60%),
-    linear-gradient(180deg, #0e1818 0%, #050909 100%);
-  border: 1px solid rgba(0, 200, 200, 0.22);
+    radial-gradient(circle at 25% 0%, rgba(200, 97, 0, 0.2) 0%, transparent 60%),
+    linear-gradient(180deg, #18120e 0%, #090605 100%);
+  border: 1px solid rgba(200, 70, 0, 0.22);
 }
 
 .project-card--gatormind h3 {
-  color: #2dd4d4;
+  color: #d46d2d;
   font-size: 1.75rem;
   line-height: 1.2;
 }
 
 .project-card--gatormind .links a {
-  color: #2dd4d4;
+  color: #d46d2d;
 }
 
 .project-card--gatormind .project-visual {

@@ -49,13 +49,13 @@ function ProjectsSection() {
             return (
               <article
                 key={slug}
-                // className={`project-card 
-                //   ${isMoves ? "project-card--moves" : ""} 
-                //   ${isIOS ? "project-card--iosshpe" : ""} 
-                //   ${isShpeData ? "project-card--shpedata" : ""}
-                //   ${isML ? "project-card--ml" : ""}
-                //   ${isGatorMind ? "project-card--gatormind" : ""}
-                //   ${project.accentClass || ""}`}
+                className={`project-card 
+                  ${isMoves ? "project-card--moves" : ""} 
+                  ${isIOS ? "project-card--iosshpe" : ""} 
+                  ${isShpeData ? "project-card--shpedata" : ""}
+                  ${isML ? "project-card--ml" : ""}
+                  ${isGatorMind ? "project-card--gatormind" : ""}
+                  ${project.accentClass || ""}`}
                 ref={(el) => (cardRefs.current[index] = el)}
               >
 

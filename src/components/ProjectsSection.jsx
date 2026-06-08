@@ -54,6 +54,7 @@ function ProjectsSection() {
                   ${isIOS ? "project-card--iosshpe" : ""} 
                   ${isShpeData ? "project-card--shpedata" : ""}
                   ${isML ? "project-card--ml" : ""}
+                  ${isGatorMind ? "project-card--gatormind" : ""}
                   ${project.accentClass || ""}`}
                 ref={(el) => (cardRefs.current[index] = el)}
               >

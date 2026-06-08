@@ -9,7 +9,6 @@ const projectsData = [
       "A neural network interpretability dashboard built as a senior capstone, enabling real-time visualization of how a model processes and clusters 200k+ facial image embeddings.",
     tech: "FastAPI • React • MongoDB • ONNX Runtime",
     image: null,
-    link: "/projects/moves",
   },
   {
     slug: "moves-app",

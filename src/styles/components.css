@@ -550,19 +550,25 @@
 /* GATORMIND CARD */
 .project-card--gatormind {
   background:
-    radial-gradient(circle at 25% 0%, rgba(0, 200, 200, 0.2) 0%, transparent 60%),
-    linear-gradient(180deg, #0e1818 0%, #050909 100%);
-  border: 1px solid rgba(0, 200, 200, 0.22);
+    radial-gradient(circle at 25% 0%, rgba(250, 100, 0, 0.25) 0%, transparent 60%),
+    linear-gradient(180deg, #1a1208 0%, #080603 100%);
+  border: 1px solid rgba(250, 100, 0, 0.25);
 }
 
 .project-card--gatormind h3 {
-  color: #2dd4d4;
+  color: #ff9c3f;
   font-size: 1.75rem;
   line-height: 1.2;
 }
 
 .project-card--gatormind .links a {
-  color: #2dd4d4;
+  color: #ff9c3f;
+  font-weight: 600;
+  transition: color 0.25s ease;
+}
+
+.project-card--gatormind .links a:hover {
+  color: #ffb870;
 }
 
 .project-card--gatormind .project-visual {
@@ -582,5 +588,4 @@
 
 .project-card--gatormind .project-card-content {
   margin-top: -6px;
-  text-align: left;
 }

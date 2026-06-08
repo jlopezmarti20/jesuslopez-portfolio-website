@@ -7,6 +7,7 @@ import movesComposite from "../assets/Group 1.png";
 import iosComposite from "../assets/Group 2.png";
 import shpeDataGraphic from "../assets/Group 3.png";
 import mlGraphic from "../assets/Group 4.png";
+import gatormindGraphic from "../assets/gatormind.png"
 
 function ProjectsSection() {
   const cardRefs = useRef([]);
@@ -43,6 +44,7 @@ function ProjectsSection() {
             const isIOS = slug === "ios-shpe";
             const isShpeData = slug === "shpe-data";
             const isML = slug === "ml-diabetes";
+            const isGatorMind = slug === "gatormind";
 
             return (
               <article
@@ -89,6 +91,16 @@ function ProjectsSection() {
                       className="project-image"
                     />
                   </div>
+                
+                ) : isGatorMind ? (   // ADD HERE — after isML block
+                  <div className="project-visual gatormind-visual">
+                    <img
+                      src={gatormindGraphic}
+                      alt="GatorMind Neural Network Dashboard"
+                      className="project-image"
+                    />
+                    </div>
+                
                 ) : (
                   project.image && (
                     <div className="project-visual">

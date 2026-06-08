@@ -124,13 +124,13 @@ function ProjectsSection() {
 
                   <p>{project.description || project.summary}</p>
 
-                  {project.link && (
+                  {/*project.link && (
                     <div className="links">
                       <a href={project.link}>
                         View Project <span className="home-arrow">➔</span>
                       </a>
                     </div>
-                  )}
+                  )*/}
                 </div>
               </article>
             );

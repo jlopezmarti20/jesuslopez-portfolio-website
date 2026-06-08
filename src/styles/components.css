@@ -1,3 +1,12 @@
+.project-card .project-visual,
+.project-card .moves-visual,
+.project-card .ios-visual,
+.project-card .shpe-visual,
+.project-card .gatormind-visual,
+.project-card .ml-visual {
+  height: 260px !important;
+}
+
 /* GENERIC CARD */
 .card {
   background: #181923;

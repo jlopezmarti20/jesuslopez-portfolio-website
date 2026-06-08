@@ -557,6 +557,8 @@
 
 .project-card--gatormind h3 {
   color: #2dd4d4;
+  font-size: 1.75rem;
+  line-height: 1.2;
 }
 
 .project-card--gatormind .links a {
@@ -580,10 +582,5 @@
 
 .project-card--gatormind .project-card-content {
   margin-top: -6px;
-  text-align: right;
-}
-
-.project-card--gatormind h3 {
-  font-size: 1.75rem;
-  line-height: 1.2;
+  text-align: left;
 }

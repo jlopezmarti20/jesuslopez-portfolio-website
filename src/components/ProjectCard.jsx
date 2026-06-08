@@ -4,7 +4,7 @@ import rectangleBg from "../assets/Rectangle 27.png";
 import movesHome from "../assets/Moves-home-screen.webp";
 
 function ProjectCard({ project }) {
-  const isMoves = project.slug === "moves-app"; // ⬅️ make sure this matches your Moves slug
+  const isMoves = project.slug === "moves-app"; 
 
   return (
     <article
